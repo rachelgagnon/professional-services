@@ -178,6 +178,8 @@ them to fit your particular use case.
     An example pipeline to transpose/pivot/rotate a BigQuery table.
 *   [Dataflow Custom Templates Example](examples/dataflow-custom-templates) - An
     example that demonstrates how to build custom Dataflow templates.
+*   [Dataflow Custom Images for Flex Templates Example] - An example that demonstrates
+    how to use custom Docker images with a Flex Template to install client libraries before startup. 
 *   [Dataflow Elasticsearch Indexer](examples/dataflow-elasticsearch-indexer) -
     An example pipeline that demonstrates the process of reading JSON documents
     from Cloud Pub/Sub, enhancing the document using metadata stored in Cloud
