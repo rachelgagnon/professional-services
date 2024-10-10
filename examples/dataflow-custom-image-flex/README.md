@@ -1,5 +1,5 @@
 # Custom Dataflow Flex Temlate Image
-This repo demonstrates how to use custom container images to build and deploy Dataflow flex templates. We use two different custom images, the template launcher image and the execution image. Each custom container is a Dockerfile that is built and pushed to Artifact Registry using Cloud Build.
+This repo demonstrates how to use custom container images to build and deploy Dataflow flex templates. Custom containers can be used to install dependencies before starting up a pipeline to decrease worker startup time. Certain client libraries, such as the Oracle Instant Client for Python, require system variables to be set, which must be set before the Python program starts. This example Dockerfile installs the client library in the expected location so that workers can access it once the pipeline starts up. We use two different custom images, the template launcher image and the execution image. Each custom container is a Dockerfile that is built and pushed to Artifact Registry using Cloud Build.
 
 ### Template Launcher Image: 
 This image is responsible for building the Flex Template itself. It's essential for using templates and needs to contain any packages required outside the core pipeline logic (e.g., the Oracle client library). It typically uses the entrypoint /opt/google/dataflow/python_template_launcher.
